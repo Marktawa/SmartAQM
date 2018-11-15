@@ -19,20 +19,20 @@
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
       
-      var myVar = setInterval(drawChart, 1000);
+      var myVar = setInterval(drawChart, 5000);
 
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
       function drawChart() {
 
-        let x = Math.random() * 100;
-    let y = Math.random() * 100;
-    let z = Math.random() * 100;
+    let x = (Math.random() * 100).toFixed(2);
+    let y = (Math.random() * 100).toFixed(2);
+    let z = (Math.random() * 100).toFixed(2);
     
-     x.toFixed(2);
-     y.toFixed(2);
-     z.toFixed(2);
+     //x.toFixed(2);
+     //y.toFixed(2);
+     //z.toFixed(2);
     
        var data = google.visualization.arrayToDataTable([
         ['Element', 'Density', { role: 'style' }],
