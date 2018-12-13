@@ -126,6 +126,27 @@ var data = google.visualization.arrayToDataTable([
   chart.draw(data, options);
 }
     }      
+      
+      // Initialize and add the map
+function initMap() {
+ 
+  var airPort = {
+    lat: -17.918651,
+    lng: 31.097258
+  };
+  
+  var map = new google.maps.Map(
+    document.getElementById('map'), {
+      zoom: 10,
+      center: airPort
+    });
+  
+  var marker = new google.maps.Marker({
+    position: airPort,
+    map: map
+  });
+}
+
     </script>
     
     <style>
@@ -157,6 +178,11 @@ var data = google.visualization.arrayToDataTable([
       </div>
      </div>
     </div>
+    <div class="container-fluid" id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZn2PHzKEdliyYOEWf2drZyvL2onbUHqQ&callback=initMap">
+</script>
+
                                                              
 <footer class="container-fluid text-center">
   <p>By Mark Munyaka</p>
